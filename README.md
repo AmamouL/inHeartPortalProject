@@ -1,18 +1,17 @@
-# **inHeart**
+# inHeartPortalProject
+inHEART Portal is a secured web platform for the management of customers’ orders and the transfer of data between inHEART and its customers. 
+inHEART Portal is compatible with the following web browsers : 
+- Google Chrome 87 and later, 
+- Microsoft Edge 88 and later
 
-This is an example app used to showcase [Cypress.io](https://www.cypress.io/) testing. The application uses every API command in Cypress for demonstration purposes. 
+The project ensures that bellow requirements are respected:
 
-The example is configured to run tests in github actions CI platform. 
-
-For a full reference of Cypress documentation, visit link [https://docs.cypress.io/](https://docs.cypress.io/).
-
-The project focuses on "smoke test" used to verify if major features are working.
-
-### Test Documentation
-
-To see the Gherkin visit the folder in repo
-
-We add tag for use cases and test suites
+- REQ1: A home page allows to log in Portal by entering a username and a password
+- REQ2: User is warned on the login page when he uses an unsupported browser
+- REQ3: After six repeated failed password attempts, user ID is locked out for 30 minutes
+- REQ4: Website footer notifies the use of cookie on Portal
+- REQ5: Software version is displayed in the footer
+- REQ6: Footer contains Copyright, a link to licences and Terms of Use (available if user is logged in)
 
 ###  Testing Steps
 
@@ -31,31 +30,16 @@ We add tag for use cases and test suites
    See [this link](https://docs.cypress.io/guides/tooling/reporters#Examples) for more information
    
    
-   
-   
-   
    ### Generate report
+   npm run cy:run:report
    
-   HTML Report is stored in **mochawesome-report** directory.
+   ### File Location:
    
-   
-   
-   #### Repository Content
-   
-   
-   
-   ### Continuous Integration
-   
-   
-   
-   ##### Artifacts
-   
-   Generated videos,  screenshots and html report are stored as CI artifacts that can be downloaded from <mmmmmm>
-   
-   Join imprim
-   
-   
+   ###### Data feeder in: cypress/fixtures directory
 
-### More Info
-
-For more information see [cypress-io/github-action](https://github.com/cypress-io/github-action) and read [Drastically Simplify Testing on CI with Cypress GitHub Action](https://www.cypress.io/blog/2019/11/20/drastically-simplify-your-testing-with-cypress-github-action/)https://www.cypress.io/blog/2019/11/20/drastically-simplify-your-testing-with-cypress-github-action/
+   Use Case Descritpion in Gherkin languag in : cypress/features directory
+   Test Suite in : cypress/integration
+   Results:
+   
+   Videos are in cypress/videos directory
+   HTML Report in: inHeartPortalProject/mochawesome-report/mochawesome.html 

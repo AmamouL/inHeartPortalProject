@@ -1,0 +1,27 @@
+{
+    "credentials": [{
+            "login": "admin",
+            "password": "admin"
+        },
+        {
+            "login": "admin",
+            "password": "123"
+        },
+        {
+            "login": "admin",
+            "password": "test"
+        },
+        {
+            "login": "admin",
+            "password": "admin"
+        },
+        {
+            "login": "admin",
+            "password": "123"
+        },
+        {
+            "login": "admin",
+            "password": "test"
+        }
+    ]
+}

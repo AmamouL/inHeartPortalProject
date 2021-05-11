@@ -1,9 +1,10 @@
 {
     "devDependencies": {
-        "cypress": "^7.2.0",
+        "cypress": "^7.3.0",
         "mochawesome": "^6.2.2",
         "mochawesome-merge": "^4.2.0",
-        "mochawesome-report-generator": "^5.2.0"
+        "mochawesome-report-generator": "^5.2.0",
+        "rimraf": "^3.0.2"
     },
     "name": "inHeart_Test",
     "description": "This is an example app used to showcase [Cypress.io](https://www.cypress.io/) testing. The application uses every API command in Cypress for demonstration purposes.",
@@ -149,7 +150,6 @@
         "readable-stream": "^2.3.7",
         "request-progress": "^3.0.0",
         "restore-cursor": "^1.0.1",
-        "rimraf": "^3.0.2",
         "rxjs": "^6.6.7",
         "safe-buffer": "^5.2.1",
         "safer-buffer": "^2.1.2",
@@ -185,8 +185,10 @@
     },
     "scripts": {
         "cy:open": "cypress open",
-        "cy:run": "cypress run --browser chrome --headless",
-        "cy:erase:run": "rimraf mochawesome-report cypress/results mochawesome.json && npm run cy:run",
+        "cy:run:chrome": "cypress run --browser chrome --spec 'cypress/integration/01-login.js'",
+        "cy:run:Edge": "cypress run --browser edge 'cypress/integration/02-browser.js'",
+        "cy:run:firefox": "cypress run --browser firefox 'cypress/integration/01-login.js'",
+        "cy:erase:run": "rimraf mochawesome-report cypress/results mochawesome.json && npm run cy:run:chrome && npm run cy:run:chrome&& npm run cy:run:Edge",
         "cy:report:merge": "mochawesome-merge 'cypress/results/json/*.json' > mochawesome.json",
         "cy:report:htmlGenerate": "npx marge mochawesome.json",
         "cy:run:report": "npm run cy:erase:run && npm run cy:report:merge && npm run cy:report:htmlGenerate"

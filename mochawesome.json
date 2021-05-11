@@ -1,105 +1,195 @@
 {
-  "stats": {
-    "suites": 1,
-    "tests": 1,
-    "passes": 1,
-    "pending": 0,
-    "failures": 0,
-    "start": "2021-05-11T07:54:27.230Z",
-    "end": "2021-05-11T07:54:35.288Z",
-    "duration": 7683,
-    "testsRegistered": 1,
-    "passPercent": 100,
-    "pendingPercent": 0,
-    "other": 0,
-    "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
-  },
-  "results": [
-    {
-      "uuid": "6ce24464-86b2-4c97-b180-b45b02851a65",
-      "title": "",
-      "fullFile": "cypress/integration/01-addProduct.spec copy.js",
-      "file": "cypress/integration/01-addProduct.spec copy.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
+    "stats": {
+        "suites": 2,
+        "tests": 4,
+        "passes": 3,
+        "pending": 1,
+        "failures": 0,
+        "start": "2021-05-11T11:00:54.564Z",
+        "end": "2021-05-11T11:04:32.679Z",
+        "duration": 66382,
+        "testsRegistered": 4,
+        "passPercent": 75,
+        "pendingPercent": 25,
+        "other": 0,
+        "hasOther": false,
+        "skipped": 0,
+        "hasSkipped": false
+    },
+    "results": [{
+            "uuid": "57546295-15c0-47d6-91bd-ba81dcc54b40",
+            "title": "",
+            "fullFile": "cypress/integration/01-login.js",
+            "file": "cypress/integration/01-login.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [],
+            "suites": [{
+                "uuid": "9fb54429-9210-482f-8bd1-5b78d3495914",
+                "title": "login tests",
+                "fullFile": "",
+                "file": "",
+                "beforeHooks": [],
+                "afterHooks": [],
+                "tests": [{
+                        "title": "Wrong password credential \"#Req1\"",
+                        "fullTitle": "login tests Wrong password credential \"#Req1\"",
+                        "timedOut": null,
+                        "duration": 8075,
+                        "state": "passed",
+                        "speed": "slow",
+                        "pass": true,
+                        "fail": false,
+                        "pending": false,
+                        "context": null,
+                        "code": "login.setCredentials(credentials[0].login, credentials[0].password);\nlogin.submitLogin();\nlogin.checkCredentials();",
+                        "err": {},
+                        "uuid": "4524f5df-9598-4bfb-9f39-f263aa1fd27e",
+                        "parentUUID": "9fb54429-9210-482f-8bd1-5b78d3495914",
+                        "isHook": false,
+                        "skipped": false
+                    },
+                    {
+                        "title": "Six incorrect password \"#Req2\"",
+                        "fullTitle": "login tests Six incorrect password \"#Req2\"",
+                        "timedOut": null,
+                        "duration": 22530,
+                        "state": "passed",
+                        "speed": "slow",
+                        "pass": true,
+                        "fail": false,
+                        "pending": false,
+                        "context": null,
+                        "code": "credentials.forEach(credential => {\n  login.setCredentials(credential.login, credential.password);\n  login.submitLogin();\n  login.checkCredentials();\n});",
+                        "err": {},
+                        "uuid": "8246c8d0-ea11-4c76-9af8-ddccadf69243",
+                        "parentUUID": "9fb54429-9210-482f-8bd1-5b78d3495914",
+                        "isHook": false,
+                        "skipped": false
+                    }
+                ],
+                "suites": [],
+                "passes": [
+                    "4524f5df-9598-4bfb-9f39-f263aa1fd27e",
+                    "8246c8d0-ea11-4c76-9af8-ddccadf69243"
+                ],
+                "failures": [],
+                "pending": [],
+                "skipped": [],
+                "duration": 30605,
+                "root": false,
+                "rootEmpty": false,
+                "_timeout": 2000
+            }],
+            "passes": [],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 0,
+            "root": true,
+            "rootEmpty": true,
+            "_timeout": 2000
+        },
         {
-          "uuid": "a865ac4b-626c-4a1e-9ade-3c0aad320557",
-          "title": "Project Scenarii",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "Scenario referenceSearch",
-              "fullTitle": "Project Scenarii Scenario referenceSearch",
-              "timedOut": null,
-              "duration": 7683,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cart.addTocartViareference(product[0]);",
-              "err": {},
-              "uuid": "35b14fe2-fc9c-47d7-9648-150e72d760fd",
-              "parentUUID": "a865ac4b-626c-4a1e-9ade-3c0aad320557",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "35b14fe2-fc9c-47d7-9648-150e72d760fd"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 7683,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
+            "uuid": "bd0b5789-08b2-49f8-a087-4dfdc920dee7",
+            "title": "",
+            "fullFile": "cypress/integration/01-login.js",
+            "file": "cypress/integration/01-login.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [],
+            "suites": [{
+                "uuid": "bbcb64b4-9406-4b46-b29c-d153faf1a8db",
+                "title": "login tests",
+                "fullFile": "",
+                "file": "",
+                "beforeHooks": [],
+                "afterHooks": [],
+                "tests": [{
+                        "title": "Wrong password credential \"#Req1\"",
+                        "fullTitle": "login tests Wrong password credential \"#Req1\"",
+                        "timedOut": null,
+                        "duration": 0,
+                        "state": "pending",
+                        "speed": null,
+                        "pass": false,
+                        "fail": false,
+                        "pending": true,
+                        "context": null,
+                        "code": "",
+                        "err": {},
+                        "uuid": "c19fc0ea-e89f-4629-88f4-c88c065cf82f",
+                        "parentUUID": "bbcb64b4-9406-4b46-b29c-d153faf1a8db",
+                        "isHook": false,
+                        "skipped": false
+                    },
+                    {
+                        "title": "Six incorrect password \"#Req2\"",
+                        "fullTitle": "login tests Six incorrect password \"#Req2\"",
+                        "timedOut": null,
+                        "duration": 35777,
+                        "state": "passed",
+                        "speed": "slow",
+                        "pass": true,
+                        "fail": false,
+                        "pending": false,
+                        "context": null,
+                        "code": "credentials.forEach(credential => {\n  cy.log(credential.login);\n  login.setCredentials(credential.login, credential.password);\n  login.submitLogin();\n  login.checkCredentials();\n});",
+                        "err": {},
+                        "uuid": "80d73f91-7623-40ca-8f30-4c95f8fee11d",
+                        "parentUUID": "bbcb64b4-9406-4b46-b29c-d153faf1a8db",
+                        "isHook": false,
+                        "skipped": false
+                    }
+                ],
+                "suites": [],
+                "passes": [
+                    "80d73f91-7623-40ca-8f30-4c95f8fee11d"
+                ],
+                "failures": [],
+                "pending": [
+                    "c19fc0ea-e89f-4629-88f4-c88c065cf82f"
+                ],
+                "skipped": [],
+                "duration": 35777,
+                "root": false,
+                "rootEmpty": false,
+                "_timeout": 2000
+            }],
+            "passes": [],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 0,
+            "root": true,
+            "rootEmpty": true,
+            "_timeout": 2000
         }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
+    ],
+    "meta": {
+        "mocha": {
+            "version": "7.0.1"
+        },
+        "mochawesome": {
+            "options": {
+                "quiet": false,
+                "reportFilename": "mochawesome",
+                "saveHtml": false,
+                "saveJson": true,
+                "consoleReporter": "spec",
+                "useInlineDiffs": false,
+                "code": true
+            },
+            "version": "6.2.2"
+        },
+        "marge": {
+            "options": {
+                "reportDir": "cypress/results/json",
+                "overwrite": false,
+                "html": false,
+                "json": true
+            },
+            "version": "5.2.0"
+        }
     }
-  ],
-  "meta": {
-    "mocha": {
-      "version": "7.0.1"
-    },
-    "mochawesome": {
-      "options": {
-        "quiet": false,
-        "reportFilename": "mochawesome",
-        "saveHtml": false,
-        "saveJson": true,
-        "consoleReporter": "spec",
-        "useInlineDiffs": false,
-        "code": true
-      },
-      "version": "6.2.2"
-    },
-    "marge": {
-      "options": {
-        "reportDir": "cypress/results/json",
-        "overwrite": false,
-        "html": false,
-        "json": true
-      },
-      "version": "5.2.0"
-    }
-  }
 }
