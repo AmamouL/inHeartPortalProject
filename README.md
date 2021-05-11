@@ -31,15 +31,18 @@ The project ensures that bellow requirements are respected:
    
    
    ### Generate report
-   npm run cy:run:report
+   run: npm run cy:run:report
    
    ### File Location:
    
    ###### Data feeder in: cypress/fixtures directory
 
-   Use Case Descritpion in Gherkin languag in : cypress/features directory
-   Test Suite in : cypress/integration
+   ***Use Case Descritption in Gherkin language in*** : cypress/features directory
+   
+   ***Test Suite in :*** cypress/integration
    Results:
    
-   Videos are in cypress/videos directory
-   HTML Report in: inHeartPortalProject/mochawesome-report/mochawesome.html 
+   ***Videos are in:*** cypress/videos directory
+   ***HTML Report in:*** inHeartPortalProject/mochawesome-report/mochawesome.html 
+   
+   ***json Results in :*** Cypress/results/json
